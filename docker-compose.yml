@@ -1,0 +1,11 @@
+version: "3"
+services:
+ cronjava:
+   container_name: "cronjava"
+   build: .
+   volumes:
+     - ./ejecutaRoboSat.sh:/app/ejecutaRoboSat.sh
+     - ./cronfile:/etc/cron.d/cronfile
+   environment:
+     - JAVA_HOME=/usr/bin/java
+
